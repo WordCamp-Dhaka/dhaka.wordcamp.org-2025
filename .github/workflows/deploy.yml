@@ -1,9 +1,12 @@
 name: Build and Deploy CSS
 
+permissions:
+  contents: write   # Required to push to private repo
+
 on:
   push:
     branches:
-      - main  # Trigger on changes to main branch
+      - main   # Trigger on changes to main branch
 
 jobs:
   build:
@@ -22,8 +25,8 @@ jobs:
         with:
           node-version: '18'
 
-      # 3️⃣ Clean and install dependencies
-      - name: Clean node_modules and install dependencies
+      # 3️⃣ Clean node_modules and install dependencies
+      - name: Clean and install dependencies
         run: |
           rm -rf node_modules package-lock.json
           npm install
@@ -33,7 +36,7 @@ jobs:
         run: npm run build
 
       # 5️⃣ Configure Git to use Actions bot
-      - name: Configure Git for GitHub Actions
+      - name: Configure Git
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -46,4 +49,4 @@ jobs:
           cp -r dist/* .
           git add .
           git commit -m "Deploy CSS from Vite build"
-          git push --force origin build
+          git push --force https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }} build
