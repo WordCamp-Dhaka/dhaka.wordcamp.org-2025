@@ -1,0 +1,17 @@
+{
+  "name": "dhaka.wordcamp.org-2025",
+  "version": "1.0.0",
+  "description": "Vite + SCSS boilerplate for WordCamp Dhaka 2025 Remote CSS",
+  "scripts": {
+    "dev": "vite",
+    "watch": "vite build --watch",
+    "build": "del-cli dist --force && vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "del-cli": "^6.0.0",
+    "sass": "^1.90.0",
+    "vite": "^7.1.2",
+    "vite-plugin-singlefile": "^2.3.0"
+  }
+}
