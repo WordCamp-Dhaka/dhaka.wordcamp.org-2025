@@ -7,9 +7,9 @@ export default defineConfig({
   build: {
     outDir: '../dist',
     rollupOptions: {
-      input: './src/styles.scss',
+      input: './src/style.scss',
       output: {
-        assetFileNames: 'styles.css'
+        assetFileNames: 'style.css'
       }
     }
   }
