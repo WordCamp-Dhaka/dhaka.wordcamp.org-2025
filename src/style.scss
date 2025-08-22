@@ -42,3 +42,44 @@
 /*
  * Home Info Box - End
  */
+
+
+
+
+
+/*
+ * Attendees list - Start
+ */
+ #tix-attendees {
+ 	.tix-attendee-list {
+ 		img.avatar {
+		    border-radius: 40%;
+		    margin-bottom: 24px;
+		}
+
+		.tix-attendee-name {
+		    font-size: 20px;
+		    font-weight: 600;
+		    line-height: 1.3;
+		    color: #07292A;
+		    margin-bottom: 16px;
+		}
+
+		.tix-job-title,
+		.tix-company-name,
+		.tix-attendee-url,
+		.tix-attendee-twitter {
+		    font-size: 14px;
+		    color: #070707;
+		    line-height: 1.5;
+		}
+
+		.tix-attendee-url,
+		.tix-attendee-twitter {
+		    opacity: .7;
+		}
+ 	}
+}
+/*
+ * Attendees list - End
+ */
