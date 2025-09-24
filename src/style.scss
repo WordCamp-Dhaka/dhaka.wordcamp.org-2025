@@ -343,3 +343,13 @@
  /*
  * Tickets - End
  */
+
+/*
+ * Sponsor - Start
+ */
+.wp-block-post.type-wcb_sponsor:not(:has(.wp-block-post-featured-image)) {
+	display: none;
+}
+/*
+ * Sponsor - End
+ */
